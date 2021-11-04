@@ -1,0 +1,6 @@
+<nav class="main-nav @className" aria-label="Меню сайта">
+  <button class="main-nav__btn btn-burger" aria-label="Показать / скрыть меню"></button>
+  <ul class="main-nav__list">
+    @loop('blocks/main-nav-loop.html', 'data/blocks/main-nav-loop.json')
+  </ul>
+</nav>

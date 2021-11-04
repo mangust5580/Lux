@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('blocks/head.html', {
+title: "Lux | Каршеринг"
+})
+
+<body>
+  <div class="site-container">
+    @include('blocks/page-header.html')
+    <main>
+      @include('sections/about.html')
+      @include('sections/rent.html')
+      @include('sections/benefits.html')
+      @include('sections/reviews.html')
+      @include('sections/feedback.html')
+    </main>
+    @include('blocks/page-footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

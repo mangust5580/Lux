@@ -1,0 +1,17 @@
+<section class="rent">
+  <div class="container">
+    <div class="rent__inner section-inner">
+      <div class="rent__descr">
+        <h2 class="section-title rent__title">Условия аренды автомобиля</h2>
+        <p class="rent__descr-text">Мы ценим каждого клиента и предоставляем качественный сервис каршеринга в
+          Киеве.</p>
+        <p class="rent__descr-text">Именно для того, что бы Вам было приятно и безопасно пользоваться нашим
+          сервисом на постоянной основе, мы выделили несколько условий для того, чтобы взять машину в аренду</p>
+        <a class="rent__descr-btn btn" href="#">Скачать приложение</a>
+      </div>
+      <ol class="rent__list">
+        @loop('sections/rent-loop.html', 'data/sections/rent-loop.json')
+      </ol>
+    </div>
+  </div>
+</section>

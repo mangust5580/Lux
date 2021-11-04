@@ -1,0 +1,9 @@
+.page-header {
+  background-color: $branded;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+}

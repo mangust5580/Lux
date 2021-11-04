@@ -1,0 +1,41 @@
+<section class="benefits">
+  <div class="container">
+    <h2 class="section-title benefits__title">Преимущества</h2>
+    <div class="benefits__inner section-inner">
+      <ul class="benefits__list">
+        <li class="benefits__item">Мойка авто каждую неделю</li>
+        <li class="benefits__item">Премиум автомобили</li>
+        <li class="benefits__item">Мощный двигатель</li>
+        <li class="benefits__item">Поддержка 24/7</li>
+        <li class="benefits__item">Бензин за наш счет</li>
+        <li class="benefits__item">Парковка по всему городу</li>
+        <li class="benefits__item">Каждый месяц ТО автомобиля</li>
+      </ul>
+      <picture class="benefits__picture">
+        <source type="image/avif" srcset="
+            images/benefits-image.avif 1x,
+            images/benefits-image.avif 2x
+          " />
+        <source type="image/webp" srcset="
+            images/benefits-image.webp 1x,
+            images/benefits-image.webp 2x
+          " />
+        <img width="600" height="400" src="images/benefits-image.jpg"
+          srcset="images/benefits-image@2x.jpg 2x" alt="Mercedes Benz" />
+      </picture>
+      <div class="benefits__descr">
+        <p class="benefits__descr-text">Вы можете выбрать один из 300 наших автомобилей, насладиться сервисом, повысить уровень жизни, не покупая дорогой автомобиль, успевать везде и каждый день ездить на новом премиум автомобиле.</p>
+        <p class="benefits__descr-text">Посмотрите видео презентацию нашего сервиса и выберите автомобиль уже сейчас!</p>
+        <button class="benefits__btn btn js-modal-btn" data-video-id="P0r4WBipSoM">
+          @include('blocks/icon.html', {
+            className: 'benefits__btn-icon',
+            width: 25,
+            height: 25,
+            href: 'icon-play'
+          })
+          <span class="benefits__btn-text">Посмотреть презентацию</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

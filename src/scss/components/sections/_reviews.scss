@@ -1,0 +1,58 @@
+.reviews {
+  background-color: $branded;
+  color: $white;
+  &__title {
+    color: $white;
+    margin-bottom: 70px;
+    @include md {
+      text-align: center;
+    }
+  }
+  &__swiper {
+    padding-bottom: 60px;
+  }
+  &__swiper-slide {
+    box-sizing: border-box;
+    border: 1px solid $accent;
+    padding: 45px 30px;
+    text-align: center;
+    width: 270px;
+    height: 300px;
+    overflow: hidden;
+    @include xl {
+      padding: 30px 15px;
+      height: auto;
+    }
+  }
+  &__slide-title {
+    font-family: $FiraSans;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  &__slide-name {
+    font-weight: 500;
+    &::after {
+      content: ",";
+    }
+  }
+  &__slide-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__swiper-pagination {
+    bottom: 0 !important;
+    & .swiper-pagination-bullet {
+      background-color: $accent;
+      width: 8px;
+      height: 8px;
+    }
+    & .swiper-pagination-bullet-active {
+      background-color: $accent;
+      width: 14px;
+      height: 14px;
+      transform: translateY(2px);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<section class="reviews">
+  <div class="container">
+    <div class="reviews__inner section-inner">
+      <h2 class="section-title reviews__title">Отзывы</h2>
+      <div class="reviews__swiper swiper">
+        <div class="swiper-wrapper">
+          @loop('sections/reviews-loop.html', 'data/sections/reviews-loop.json')
+        </div>
+        <div class="reviews__swiper-pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

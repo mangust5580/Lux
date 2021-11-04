@@ -1,0 +1,88 @@
+.feedback {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include lg {
+      display: block;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  &__picture {
+    margin-right: 90px;
+    @include xl {
+      & img {
+        object-fit: contain;
+        object-position: top center;
+      }
+    }
+    @include lg {
+      margin-right: 0;
+      width: 100%;
+      & img {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+      }
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $dark;
+    @include lg {
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $dark;
+    @include lg {
+      text-align: center;
+    }
+  }
+  &__input {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $dark;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    @include lg {
+      text-align: center;
+    }
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $dark;
+      @include lg {
+        text-align: center;
+      }
+    }
+    &:focus {
+      box-sizing: border-box;
+      outline: 2px solid $accent;
+    }
+    @include lg {
+      max-width: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    @include sm {
+      max-width: 90%;
+    }
+  }
+  &__btn {
+    margin-top: 50px;
+    @include lg {
+      display: block;
+      margin: 40px auto 0;
+    }
+  }
+}

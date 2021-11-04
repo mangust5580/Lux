@@ -1,0 +1,56 @@
+[
+  {
+    "image": "slide-1",
+    "alt": "Mercedes Benz",
+    "table": {
+      "price": 5,
+      "roominess": 5,
+      "mileage": 50
+    }
+  },
+  {
+    "image": "slide-2",
+    "alt": "Jaguar XJL",
+    "table": {
+      "price": 4,
+      "roominess": 5,
+      "mileage": 40
+    }
+  },
+  {
+    "image": "slide-3",
+    "alt": "BMW X6",
+    "table": {
+      "price": 5,
+      "roominess": 5,
+      "mileage": 50
+    }
+  },
+  {
+    "image": "slide-4",
+    "alt": "Audi A7",
+    "table": {
+      "price": 5,
+      "roominess": 5,
+      "mileage": 50
+    }
+  },
+  {
+    "image": "slide-5",
+    "alt": "Hyundai Accent",
+    "table": {
+      "price": 3,
+      "roominess": 5,
+      "mileage": 40
+    }
+  },
+  {
+    "image": "slide-6",
+    "alt": "Cadillac XTS",
+    "table": {
+      "price": 4,
+      "roominess": 5,
+      "mileage": 70
+    }
+  }
+]

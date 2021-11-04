@@ -1,0 +1,29 @@
+<section class="feedback">
+  <div class="container">
+    <div class="feedback__inner section-inner">
+      <picture class="feedback__picture">
+        <source type="image/avif" srcset="
+            images/feedback-img.avif 1x,
+            images/feedback-img.avif 2x
+          " />
+        <source type="image/webp" srcset="
+            images/feedback-img.webp 1x,
+            images/feedback-img.webp 2x
+          " />
+        <img width="600" height="450" src="images/feedback-img.jpg"
+          srcset="images/feedback-img@2x.jpg 2x" alt="Озадаченная девушка и желтый автомобиль Mercedes" />
+      </picture>
+      <form class="feedback__form">
+        <h2 class="section-title feedback__title">Остались вопросы?</h2>
+        <p class="feedback__text">Мы перезвоним Вам и проконсультируем по любому вопросу</p>
+        <label>
+          <input class="feedback__input" type="text" placeholder="Имя">
+        </label>
+        <label>
+          <input class="feedback__input" type="tel" placeholder="Телефон">
+        </label>
+        <button class="feedback__btn btn" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+.main-nav {
+  @include md {
+    order: 3;
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    @include md {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 110px;
+      background-color: $branded;
+      border-top: 1px solid $accent;
+      padding: 1px 0;
+      transform: translateY(calc(-100% - 114px));
+      transition: all 0.5s;
+      z-index: 50;
+      &--show {
+        transform: translateY(0);
+      }
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+      @include lg {
+        margin-right: 20px;
+      }
+      @include md {
+        margin-right: 0;
+      }
+    }
+    @include md {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid $accent;
+    }
+  }
+  &__link {
+    @extend %link;
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $white;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        background-color: $white;
+        height: 1px;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  &__btn {
+    display: none;
+    @include md {
+      display: inline-block;
+    }
+  }
+}

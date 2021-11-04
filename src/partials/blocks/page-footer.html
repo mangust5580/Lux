@@ -1,0 +1,20 @@
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer__inner">
+      <div class="page-footer__block">
+        <a class="page-footer__link btn" href="#">Скачать приложение</a>
+        @include('blocks/main-nav.html', {
+          className: 'page-footer__main-nav'
+        })
+        @include('blocks/phone.html', {
+          className: 'page-footer__phone',
+          tel: 380999999090,
+          text: '+38 (099) 999 90 90'
+        })
+      </div>
+      <div class="page-footer__block">
+        @include('blocks/social.html')
+      </div>
+    </div>
+  </div>
+</footer>

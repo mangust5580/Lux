@@ -1,0 +1,15 @@
+.phone {
+  @extend %link;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: $white;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}

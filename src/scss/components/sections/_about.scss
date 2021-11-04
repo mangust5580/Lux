@@ -1,0 +1,215 @@
+.about {
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    @include xl {
+      display: block;
+    }
+    @include lg {
+      margin-bottom: 50px;
+    }
+    @include sm {
+      margin-bottom: 70px;
+    }
+  }
+  &__info {
+    max-width: 45%;
+    margin-top: 140px;
+    margin-right: 20px;
+    @include xl {
+      max-width: 100%;
+      margin-top: 100px;
+      margin-right: 0;
+    }
+    @include sm {
+      margin-top: 70px;
+    }
+  }
+  &__info-title {
+    font-family: $FiraSans;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    color: $dark;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  &__info-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: $dark;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  &__info-link {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 100px;
+    @include sm {
+      margin-bottom: 70px;
+    }
+  }
+  &__info-list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    @include sm {
+      display: block;
+    }
+  }
+  &__info-item {
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px solid #332208;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 20px 12px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    &:not(:last-child) {
+      margin-right: 40px;
+      @include sm {
+        margin-bottom: 20px;
+      }
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+    @include sm {
+      width: 100%;
+      padding: 40px 20px;
+    }
+  }
+  &__info-item-icon {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
+  &__info-item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: $dark;
+  }
+  &__promo {
+    width: 55%;
+    @include xl {
+      width: 100%;
+    }
+  }
+  &__swiper {
+    height: 750px;
+    @include xl {
+      height: 550px;
+      margin-top: 40px;
+    }
+    @include sm {
+      height: auto;
+    }
+    @include mb {
+      margin-top: 0;
+    }
+  }
+  &__swiper-slide {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  &__swiper-slide-picture {
+    @include sm {
+      & img {
+        object-fit: contain;
+        object-position: center center;
+        height: auto;
+        width: 450px;
+      }
+    }
+  }
+  &__swiper-pagination {
+    top: 25% !important;
+    right: 0 !important;
+    z-index: 100;
+  }
+  & .swiper-pagination-bullet {
+    background-color: $dark;
+    width: 8px;
+    height: 8px;
+  }
+  & .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    transform: translateX(-12%);
+  }
+  &__swiper-slide-table {
+    width: 80%;
+    margin-bottom: 150px;
+    & td {
+      font-family: $FiraSans;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: $dark;
+    }
+    @include xl {
+      max-width: 50%;
+    }
+    @include md {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+  &__links {
+    text-align: center;
+    @include sm {
+    }
+  }
+  &__link {
+    @extend %link;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: $dark;
+    transition: all 0.3s;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: $dark;
+    }
+    &:hover {
+      &::before {
+        display: none;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    @include sm {
+      display: inline-block;
+      width: 100%;
+      text-decoration: underline;
+      &::before {
+        display: none;
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

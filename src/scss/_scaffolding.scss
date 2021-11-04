@@ -1,0 +1,185 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: $RobotoCondensed;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $dark;
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+%btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%link {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1200px;
+  padding: 0 40px;
+  @include lg {
+    padding: 0 30px;
+  }
+  @include md {
+    padding: 0 20px;
+  }
+  @include sm {
+    padding: 0 10px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+.btn {
+  @extend %link;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 18px;
+  width: 220px;
+  background-color: $accent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid $accent;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $white;
+    color: $accent;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.btn-burger {
+  @extend %btn-reset;
+  position: relative;
+  border-top: 2px solid $white;
+  border-bottom: 2px solid $white;
+  width: 30px;
+  height: 24px;
+  vertical-align: top;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    background-color: $white;
+  }
+}
+
+.btn-close {
+  @extend %btn-reset;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: $white;
+    top: 0;
+    left: 50%;
+  }
+  &::before {
+    transform: translateX(-50%) rotate(45deg);
+  }
+  &::after {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+.section-inner {
+  padding: 100px 0;
+  @include xl {
+    padding: 100px 0;
+  }
+  @include md {
+    padding: 60px 0;
+  }
+}
+
+.section-title {
+  font-family: $FiraSans;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  color: $dark;
+}
+
+.modal-video-close-btn {
+  cursor: pointer;
+}
+
+.overlay {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0.9;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+  }
+}
+
+.hidden {
+  display: none;
+}

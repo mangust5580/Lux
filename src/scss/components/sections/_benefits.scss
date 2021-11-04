@@ -1,0 +1,147 @@
+.benefits {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include xl {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include lg {
+      display: block;
+    }
+  }
+  &__title {
+    @include xl {
+      text-align: center;
+    }
+  }
+  &__list {
+    @extend %list;
+    width: 260px;
+    @include lg {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: -60px;
+      margin-bottom: 30px;
+    }
+    @include md {
+      margin-top: -50px;
+    }
+  }
+  &__item {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $dark;
+    padding-right: 30px;
+    text-align: center;
+    text-transform: lowercase;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $dark;
+      border-radius: 100%;
+      width: 16px;
+      height: 16px;
+      right: 0;
+    }
+    &:nth-child(2),
+    &:nth-child(6) {
+      margin-right: 30px;
+    }
+    &:nth-child(3),
+    &:nth-child(5) {
+      margin-right: 60px;
+    }
+    &:nth-child(4) {
+      margin-right: 90px;
+    }
+    @include lg {
+      display: inline-block;
+      border: 1px solid $dark;
+      padding: 12px;
+      margin-top: 20px;
+      &::before {
+        display: none;
+      }
+      &:nth-child(2),
+      &:nth-child(6) {
+        margin-right: 0;
+      }
+      &:nth-child(3),
+      &:nth-child(5) {
+        margin-right: 0;
+      }
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
+    @include sm {
+      width: 100%;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__picture {
+    margin: 0 18px;
+    width: 600px;
+    @include lg {
+      display: block;
+      margin: 0 auto;
+    }
+    @include md {
+      width: auto;
+      img {
+        object-fit: contain;
+        height: auto;
+      }
+    }
+  }
+  &__descr {
+    text-align: right;
+    width: 300px;
+    @include xl {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
+    @include md {
+      margin-top: 20px;
+    }
+  }
+  &__descr-text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: $dark;
+    margin-bottom: 30px;
+    @include xl {
+      text-align: center;
+    }
+  }
+  &__btn {
+    position: relative;
+    &:hover {
+      & .benefits__btn-icon {
+        fill: $accent;
+      }
+    }
+  }
+  &__btn-icon {
+    fill: $white;
+    position: absolute;
+    left: 20px;
+  }
+}
