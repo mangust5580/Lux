@@ -5,11 +5,15 @@ new ModalVideo(".js-modal-btn");
 
 var mainNavBtn = document.querySelector(".main-nav__btn");
 var mainNavList = document.querySelector(".main-nav__list");
-mainNavBtn.addEventListener("click", function () {
+
+var handlerMenu = function handlerMenu(evt) {
+  var target = evt.target;
   mainNavList.classList.toggle("main-nav__list--show");
-  mainNavBtn.classList.toggle("btn-burger");
-  mainNavBtn.classList.toggle("btn-close");
-});
+  target.classList.toggle("btn-burger");
+  target.classList.toggle("btn-close");
+};
+
+mainNavBtn.addEventListener("click", handlerMenu);
 "use strict";
 
 var selector = document.querySelectorAll('input[type=tel]');
